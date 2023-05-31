@@ -165,14 +165,3 @@ let playerNames = [];
     $('#fade').hide();
     // Cache l'élément avec l'id "fade" (les règles)
   });
-
-
-
-
-
-
-
-
-  
- 
-  
