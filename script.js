@@ -173,48 +173,6 @@ let playerNames = [];
 
 
 
-  var canvas = document.getElementById("diceCanvas");
-  var ctx = canvas.getContext("2d");
-
-  // Dessiner le dé
-  ctx.fillStyle = "white";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.strokeStyle = "black";
-  ctx.strokeRect(0, 0, canvas.width, canvas.height);
-
-  ctx.fillStyle = "black";
-  ctx.beginPath();
-  ctx.arc(canvas.width / 2, canvas.height / 2, 5, 0, Math.PI * 2);
-  ctx.fill();
-
-  ctx.fillStyle = "black";
-  ctx.beginPath();
-  ctx.arc(canvas.width / 4, canvas.height / 4, 5, 0, Math.PI * 2);
-  ctx.fill();
-
-  ctx.fillStyle = "black";
-  ctx.beginPath();
-  ctx.arc(canvas.width / 4 * 3, canvas.height / 4 * 3, 5, 0, Math.PI * 2);
-  ctx.fill();
-
-  ctx.fillStyle = "black";
-  ctx.beginPath();
-  ctx.arc(canvas.width / 4 * 3, canvas.height / 4, 5, 0, Math.PI * 2);
-  ctx.fill();
-
-  ctx.fillStyle = "black";
-  ctx.beginPath();
-  ctx.arc(canvas.width / 4, canvas.height / 4 * 3, 5, 0, Math.PI * 2);
-  ctx.fill();
-
-  ctx.fillStyle = "black";
-  ctx.beginPath();
-  ctx.arc(canvas.width / 4, canvas.height / 2, 5, 0, Math.PI * 2);
-  ctx.fill();
-
-  ctx.fillStyle = "black";
-  ctx.beginPath();
-  ctx.arc(canvas.width / 4 * 3, canvas.height / 2, 5, 0, Math.PI * 2);
-  ctx.fill();
+  
  
   
