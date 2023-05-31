@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    // Cette fonction est exécutée lorsque le document est prêt
   
 let scores, roundScore, activePlayer, gamePlaying;
     // Déclaration des variables pour les scores, le score du tour, le joueur actif et le statut du jeu
@@ -166,5 +165,56 @@ let playerNames = [];
     $('#fade').hide();
     // Cache l'élément avec l'id "fade" (les règles)
   });
+
+
+
+
+
+
+
+
+  var canvas = document.getElementById("diceCanvas");
+  var ctx = canvas.getContext("2d");
+
+  // Dessiner le dé
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.strokeStyle = "black";
+  ctx.strokeRect(0, 0, canvas.width, canvas.height);
+
+  ctx.fillStyle = "black";
+  ctx.beginPath();
+  ctx.arc(canvas.width / 2, canvas.height / 2, 5, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.fillStyle = "black";
+  ctx.beginPath();
+  ctx.arc(canvas.width / 4, canvas.height / 4, 5, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.fillStyle = "black";
+  ctx.beginPath();
+  ctx.arc(canvas.width / 4 * 3, canvas.height / 4 * 3, 5, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.fillStyle = "black";
+  ctx.beginPath();
+  ctx.arc(canvas.width / 4 * 3, canvas.height / 4, 5, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.fillStyle = "black";
+  ctx.beginPath();
+  ctx.arc(canvas.width / 4, canvas.height / 4 * 3, 5, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.fillStyle = "black";
+  ctx.beginPath();
+  ctx.arc(canvas.width / 4, canvas.height / 2, 5, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.fillStyle = "black";
+  ctx.beginPath();
+  ctx.arc(canvas.width / 4 * 3, canvas.height / 2, 5, 0, Math.PI * 2);
+  ctx.fill();
  
   
