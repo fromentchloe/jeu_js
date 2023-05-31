@@ -45,16 +45,21 @@
             </div>
     </header>
     <section>
-        <div id="message"></div>
         <div class="row">
+            <div id="egal" class="col-md-12"></div>
+            <div id="message" class="col-md-12"></div>
+        </div>
+        
+        <div class="row">
+            
         <div class="player-0-panel active col-md-4">
             <div class="player-name" id="name-0">Joueur 1</div>
             <div id="score-0" class="player-score">0</div>
             <div id="current-0" class="player-current-box">0</div>
         </div>
-       
+        
         <img src="./image/1.png" alt="Dice" class="dice col-md-4 align-self-center">
-
+   
         <div class="player-1-panel active col-md-4">
             <div class="player-name" id="name-1">Joueur 2</div>
             <div id="score-1" class="player-score">0</div>
@@ -62,15 +67,14 @@
         </div>
     </div>
     
-    <div class="row d-flex justify-content-between ">
-        <button id="btn-roll" class="btn-roll btn-outline-light rounded-circle col-md-1">Lancer</button>
-        <div id="egal" class="col-md-4"></div>
-        <button id="btn-hold" class="btn-hold btn-outline-light rounded-circle col-md-1">Solder</button>
-    </div>   
+    <div class="row d-flex justify-content-center ">
+        <button id="btn-roll" class="btn-roll rounded-circle col-md-1 m-5">Lancer</button>
+       <button id="btn-hold" class="btn-hold  rounded-circle col-md-1 m-5">Solder</button>
+    </div> 
 
     </section>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="index.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>

@@ -6,13 +6,13 @@ let playerNames = [];
     // Déclaration du tableau pour les noms des joueurs
   
     $('.btn-new').click(function() {
-      // Lorsque le bouton "Nouvelle partie" est cliqué
+      // Lorsque "Nouvelle partie" est cliqué
       getPlayerNames();
       // Appelle la fonction getPlayerNames()
     });
   
     $('.btn-replay').click(function() {
-         // Lorsque le bouton "rejouer" est cliqué
+         // Lorsque "rejouer" est cliqué
         init();
         // Appelle la fonction init()
     });
@@ -110,9 +110,7 @@ let playerNames = [];
       // Définit le joueur actif à 0 (premier joueur)
       gamePlaying = true;
       // Définit le statut du jeu à true (en cours)
-  
-   
-  
+      
       $('#score-0').text('0');
       $('#score-1').text('0');
       // Met à jour l'affichage des scores globaux à 0 
