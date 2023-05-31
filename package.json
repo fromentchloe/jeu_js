@@ -1,0 +1,23 @@
+{
+    "name": "Play dice",
+    "version": "1.0.0",
+    "description": "Jeu à jouer a deux joueurs",
+    "main": "index.html",
+    "scripts": {
+      "start": "node index.html",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "dés",
+      "joueurs",
+      "score",
+      "gagne"
+    ],
+    "author": "Froment chloé",
+    "dependencies": {
+        "bootstrap": "^5.2.3",
+        "jquery": "^3.6.0"
+      }
+    }
+  
+  
