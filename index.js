@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  
+
 let scores, roundScore, activePlayer, gamePlaying;
     // Déclaration des variables pour les scores, le score du tour, le joueur actif et le statut du jeu
 let playerNames = [];
@@ -18,61 +18,61 @@ let playerNames = [];
     });
 
     function getPlayerNames() {
-      // Fonction pour obtenir les noms des joueurs
+      // obtennir les noms des joueurs
       const player1 = prompt("Entrez le nom du joueur 1:");
-      // Demande le nom du joueur 1 via une boîte de dialogue
+      // Demande le nom du joueur 1 
       const player2 = prompt("Entrez le nom du joueur 2:");
-      // Demande le nom du joueur 2 via une boîte de dialogue
+      // Demande le nom du joueur 2 
       playerNames = [player1, player2];
       // Stocke les noms des joueurs dans le tableau playerNames
       init();
-      // Initialise le jeu en appelant la fonction init()
+      // Initialise le jeu 
     }
   
     $('.btn-roll').click(function() {
-      // Lorsque le bouton "Lancer" est cliqué
+      // Lorsque "Lancer" est cliqué
       if (gamePlaying) {
-        // Si le jeu est en cours
+      
         const dice = Math.floor(Math.random() * 6) + 1;
-        // Génère un nombre aléatoire entre 1 et 6 pour simuler le lancer de dé
+        // Génère un nombre aléatoire entre 1 et 6
         const diceDOM = $('.dice');
-        // Sélectionne l'élément avec la classe "dice"
+        // Sélectionne l'élément "dice"
         diceDOM.attr('src', 'image/' + dice + '.png');
-        // Change l'image du dé selon le résultat du lancer
+        // Change l'image du dé 
         diceDOM.css('display', 'block');
         // Affiche le dé
   
         if (dice !== 1) {
           // Si le résultat du lancer n'est pas égal à 1
           roundScore += dice;
-          // Ajoute le résultat du lancer au score du tour
+          // Ajoute le résultat du lzncer au score du tour
           $('#current-' + activePlayer).text(roundScore);
-          // Met à jour l'affichage du score du tour pour le joueur actif
+          // Met à jour l'affichage du score du tour pour le joueur
         } else {
           // Si le résultat du lancer est égal à 1
           $('#egal').text('Perdu ! le lancé est égal à 1, tu perds tous tes points, Joueur suivant !').fadeIn().fadeOut(3000);
-          // Affiche un message d'erreur temporaire pour indiquer que le joueur a perdu tous ses points du tour
+          // Affiche un message d'erreur temporaire pour indiquer que le joueur a perdu tous ses temporaire
           setTimeout(nextPlayer, 500);
-          // Passe au joueur suivant après un délai de 3 secondes
+          // Passe au joueur suivant après un délai
         }
       }
     });
   
     $('.btn-hold').click(function() {
-      // Lorsque le bouton "Hold" est cliqué
+      // Lorsque le bouton est cliqué
       if (gamePlaying) {
-        // Si le jeu est en cours
+    
         scores[activePlayer] += roundScore;
-        // Ajoute le score du tour au score global du joueur actif
+        // Ajoute le score du tour au score global du joueur
         $('#score-' + activePlayer).text(scores[activePlayer]);
         // Met à jour l'affichage du score global du joueur actif
   
         if (scores[activePlayer] >= 100) {
-          // Si le score global du joueur actif atteint ou dépasse 10
+          // Si le score global du joueur actif atteint ou dépasse 100
           gamePlaying = false;
           // Définit le statut du jeu à false pour indiquer que le jeu est terminé
           $('#message').text(playerNames[activePlayer] + ' a gagné le jeu !');
-          // Affiche un message indiquant que le joueur actif a gagné
+          // Affiche un message le joueur actif a gagné
         } else {
           // Si le score global du joueur actif est inférieur à 10
           nextPlayer();
@@ -88,7 +88,7 @@ let playerNames = [];
       $('#current-' + activePlayer).text('0');
       // Met à jour l'affichage du score du tour à 0 pour le joueur actif
       activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
-      // Passe au joueur suivant (0 devient 1 et 1 devient 0)
+      // Passe au joueur suivant (0 devcient 1 et 1 devient 0)
   
       $('.player-0-panel').toggleClass('active');
       $('.player-1-panel').toggleClass('active');
@@ -101,7 +101,7 @@ let playerNames = [];
     }
   
     function init() {
-      // Fonction d'initialisation du jeu
+      // Fonction d'initialsation du jeu
       scores = [0, 0];
       // Initialise les scores globaux des joueurs à 0
       roundScore = 0;
@@ -115,11 +115,11 @@ let playerNames = [];
   
       $('#score-0').text('0');
       $('#score-1').text('0');
-      // Met à jour l'affichage des scores globaux à 0 pour les deux joueurs
+      // Met à jour l'affichage des scores globaux à 0 
   
       $('#current-0').text('0');
       $('#current-1').text('0');
-      // Met à jour l'affichage des scores du tour à 0 pour les deux joueurs
+      // Met à jour l'affichage des scores du tour à 0 
   
       $('#name-0').text(playerNames[0]);
       $('#name-1').text(playerNames[1]);
@@ -127,13 +127,13 @@ let playerNames = [];
   
       $('.player-0-panel').removeClass('winner');
       $('.player-1-panel').removeClass('winner');
-      // Supprime la classe "winner" des classes des joueurs pour enlever la surbrillance
+      // Supprime la classe "winner" des classes des joueurs 
   
       $('.player-0-panel').removeClass('active');
       $('.player-1-panel').removeClass('active');
-      // Supprime la classe "active" des classes des joueurs pour enlever la mise en évidence
+      // Supprime la classe "active" des classes des joueurs 
       $('.player-0-panel').addClass('active');
-      // Ajoute la classe "active" à la classe du premier joueur pour le mettre en surbrillance
+      // Ajoute la classe "active" à la classe du premier joueur 
       $('#message').text('');
       // Efface le message
     }
@@ -141,27 +141,27 @@ let playerNames = [];
   
     // Au chargement de la page
     $('#fade').show();
-    // Affiche l'élément avec l'id "fade"
+    // Affiche  "fade"
     $('#fade_rules').hide();
-    // Cache l'élément avec l'id "fade_rules"
+    // Cache  "fade_rules"
   
   
   $('#fade_rules').click(function() {
-    // Au clic sur le bouton "Afficher les règles"
+    // Au clic "Afficher les règles"
     $('#fade_rules').hide();
-    // Cache le bouton "Afficher les règles"
+    // Cache "Afficher les règles"
     $('#hide_rules').show();
-    // Affiche le bouton "Masquer les règles"
+    // Affiche"Masquer les règles"
     $('#fade').show();
-    // Affiche l'élément avec l'id "fade" (les règles)
+    // Affiche  (les règles)
   });
   
   $('#hide_rules').click(function() {
-    // Au clic sur le bouton "Masquer les règles"
+    // Au clic sur "Masqué les règles"
     $('#hide_rules').hide();
-    // Cache le bouton "Masquer les règles"
+    // Cache "Masquer les règles"
     $('#fade_rules').show();
-    // Affiche le bouton "Afficher les règles"
+    // Affiche "Afficher les règles"
     $('#fade').hide();
-    // Cache l'élément avec l'id "fade" (les règles)
+    // Cache (les règles)
   });
