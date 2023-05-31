@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+     
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: url(./image/wrapper.png);
+    background-size: cover;
+    }
+h1 {
+    text-align: center;
+    color: gold;
+    text-shadow: 5px 5px 5px black;
+    }
+
+.rules {
+    text-shadow: 1px 1px 5px gold;
+    font-weight: 900;
+}
+
+.player-0-panel,
+.player-1-panel {
+        text-align: center;
+        padding: 2em;
+        color: gold;
+        }
+        .player-score {
+                font-size: 5em;
+                text-align: center;
+                margin-bottom: 20px;
+        }
+        .player-current-box {
+                
+                color: white;
+                font-size: 3em;
+                text-align: center;
+                padding: 10px;
+                margin-bottom: 20px;
+        }
+       
+        .dice {
+                margin-bottom: 20px;
+        }
+        .btn-roll,
+        .btn-hold {
+            border: none;
+            width: 50vw;
+            text-align: center;
+            margin-bottom: 2em;
+            text-shadow: 1px 1px 5px gold;
+            font-weight: 900;
+            padding: 2em;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        
+        .btn-roll:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-image: url(./image/lancé.png);
+            background-size: cover;
+            
+        }
+        .btn-hold:hover {
+            transform: translateY(-20px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-image: url(./image/hold.png);
+            background-size: cover;
+        }
+
+
+#message {
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+    color: green;
+    font-size: 1.5em;
+}
+
+#egal {
+    font-size: 1.5em;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+    color: red;
+}
